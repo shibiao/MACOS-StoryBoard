@@ -27,7 +27,7 @@ class ViewController: NSViewController {
     }
     @IBAction func submitPersonalMessages(_ sender: Any) {
         
-        resultTextView.string="姓名" + nameTextField.stringValue + "\n"
+        resultTextView.string="姓名:" + nameTextField.stringValue + "\n"
         + "年龄:" + ageCombox.stringValue + "\n"
         + "性别:" + sexValue()
         
