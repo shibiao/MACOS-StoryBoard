@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -653,7 +655,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Day1" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
@@ -679,11 +681,144 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Day1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dXp-9h-p1B">
+                                <rect key="frame" x="171" y="200" width="160" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="Zew-Hn-j9G"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="ANY-fk-Adz">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9MG-Gl-yZ0">
+                                <rect key="frame" x="101" y="174" width="44" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="年龄：" id="TzT-fl-aok">
+                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2Gt-ie-le2">
+                                <rect key="frame" x="101" y="202" width="44" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="姓名：" id="nVS-7m-5tN">
+                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <comboBox verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fI2-EA-nOf">
+                                <rect key="frame" x="173" y="166" width="99" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="EQN-MD-nHp"/>
+                                </constraints>
+                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="OYh-w5-9t7">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </comboBoxCell>
+                            </comboBox>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QrS-dW-d13">
+                                <rect key="frame" x="101" y="142" width="44" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="性别：" id="ESe-nQ-VV8">
+                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="gHL-AC-QTf">
+                                <rect key="frame" x="170" y="140" width="36" height="18"/>
+                                <buttonCell key="cell" type="radio" title="男" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="0Um-x5-iPk">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="chooseMan:" target="XfG-lQ-9wD" id="dUf-hO-lZS"/>
+                                </connections>
+                            </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="VXD-CL-9I9">
+                                <rect key="frame" x="229" y="141" width="36" height="18"/>
+                                <buttonCell key="cell" type="radio" title="女" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Owe-2t-iZn">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="chooseWoman:" target="XfG-lQ-9wD" id="YDi-s4-R70"/>
+                                </connections>
+                            </button>
+                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4U-pW-o0g">
+                                <rect key="frame" x="93" y="14" width="295" height="76"/>
+                                <clipView key="contentView" id="OKP-Ie-HC6">
+                                    <rect key="frame" x="1" y="1" width="293" height="74"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="F9F-tr-T9L">
+                                            <rect key="frame" x="0.0" y="0.0" width="293" height="74"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="minSize" width="293" height="74"/>
+                                            <size key="maxSize" width="463" height="10000000"/>
+                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="vk9-qE-DWH">
+                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="q6D-La-cZi">
+                                    <rect key="frame" x="278" y="1" width="16" height="74"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sX1-56-oow">
+                                <rect key="frame" x="103" y="97" width="88" height="19"/>
+                                <buttonCell key="cell" type="roundRect" title="提交个人信息" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Eh2-fA-mb8">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="12" name=".PingFangSC-Regular"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="submitPersonalMessages:" target="XfG-lQ-9wD" id="JJF-y7-VcC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="9MG-Gl-yZ0" firstAttribute="top" secondItem="2Gt-ie-le2" secondAttribute="bottom" constant="11" id="0JT-yi-AYv"/>
+                            <constraint firstItem="dXp-9h-p1B" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="48" id="0ww-V5-2DT"/>
+                            <constraint firstItem="2Gt-ie-le2" firstAttribute="leading" secondItem="9MG-Gl-yZ0" secondAttribute="leading" id="6tE-fp-bXb"/>
+                            <constraint firstItem="2Gt-ie-le2" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="103" id="Gin-pL-Q5J"/>
+                            <constraint firstItem="c4U-pW-o0g" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="93" id="HIn-dO-uoC"/>
+                            <constraint firstAttribute="bottom" secondItem="c4U-pW-o0g" secondAttribute="bottom" constant="14" id="MPb-ji-cpM"/>
+                            <constraint firstItem="fI2-EA-nOf" firstAttribute="top" secondItem="dXp-9h-p1B" secondAttribute="bottom" constant="10" id="P0P-jB-9E3"/>
+                            <constraint firstItem="QrS-dW-d13" firstAttribute="leading" secondItem="sX1-56-oow" secondAttribute="leading" id="U6e-dY-fY2"/>
+                            <constraint firstItem="QrS-dW-d13" firstAttribute="top" secondItem="9MG-Gl-yZ0" secondAttribute="bottom" constant="15" id="Uju-EP-9gC"/>
+                            <constraint firstItem="VXD-CL-9I9" firstAttribute="leading" secondItem="gHL-AC-QTf" secondAttribute="trailing" constant="26" id="Z6z-ln-bB0"/>
+                            <constraint firstItem="c4U-pW-o0g" firstAttribute="top" secondItem="sX1-56-oow" secondAttribute="bottom" constant="8" symbolic="YES" id="anM-Sg-9qV"/>
+                            <constraint firstItem="fI2-EA-nOf" firstAttribute="leading" secondItem="9MG-Gl-yZ0" secondAttribute="trailing" constant="30" id="cnT-wu-VMq"/>
+                            <constraint firstItem="9MG-Gl-yZ0" firstAttribute="leading" secondItem="QrS-dW-d13" secondAttribute="leading" id="dhc-pc-UhJ"/>
+                            <constraint firstItem="gHL-AC-QTf" firstAttribute="baseline" secondItem="VXD-CL-9I9" secondAttribute="baseline" id="fJI-Ps-5OO"/>
+                            <constraint firstItem="sX1-56-oow" firstAttribute="top" secondItem="gHL-AC-QTf" secondAttribute="bottom" constant="25" id="hA9-NQ-5Zc"/>
+                            <constraint firstItem="2Gt-ie-le2" firstAttribute="centerY" secondItem="dXp-9h-p1B" secondAttribute="centerY" id="jGZ-bt-sth"/>
+                            <constraint firstItem="dXp-9h-p1B" firstAttribute="leading" secondItem="2Gt-ie-le2" secondAttribute="trailing" constant="28" id="ltw-ft-W2v"/>
+                            <constraint firstItem="gHL-AC-QTf" firstAttribute="top" secondItem="fI2-EA-nOf" secondAttribute="bottom" constant="13" id="mZt-j7-UHU"/>
+                            <constraint firstItem="c4U-pW-o0g" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="mpc-9p-Bo9"/>
+                            <constraint firstItem="dXp-9h-p1B" firstAttribute="leading" secondItem="gHL-AC-QTf" secondAttribute="leading" id="vu5-7x-l2j"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ageCombox" destination="fI2-EA-nOf" id="CzM-Ef-t4w"/>
+                        <outlet property="manBtn" destination="gHL-AC-QTf" id="74F-KQ-BhB"/>
+                        <outlet property="nameTextField" destination="dXp-9h-p1B" id="fDa-47-wy1"/>
+                        <outlet property="resultTextView" destination="F9F-tr-T9L" id="6WS-QY-wn9"/>
+                        <outlet property="womanBtn" destination="VXD-CL-9I9" id="q6l-Xv-0u4"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
