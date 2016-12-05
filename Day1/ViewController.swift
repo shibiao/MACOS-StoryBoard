@@ -53,10 +53,7 @@ class ViewController: NSViewController {
     }
     
     func addCombox() {
-        repeat{
-            ageCombox.addItem(withObjectValue: num);
-            num += 1
-        }while num<=50
+        for _ in 1..<50 {ageCombox.addItem(withObjectValue: num)}
         ageCombox.stringValue="25"
     }
 
