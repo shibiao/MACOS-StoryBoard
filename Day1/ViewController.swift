@@ -53,8 +53,12 @@ class ViewController: NSViewController {
     }
     
     func addCombox() {
-        for _ in 1..<50 {ageCombox.addItem(withObjectValue: num)}
-        ageCombox.stringValue="25"
+        for _ in 1..<50 {
+            ageCombox.addItem(withObjectValue: num)
+            num += 1
+        }
+        ageCombox.selectItem(at: 24)
+        ageCombox.scrollItemAtIndexToTop(24)
     }
 
     override var representedObject: Any? {
